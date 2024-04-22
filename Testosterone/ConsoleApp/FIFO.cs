@@ -43,7 +43,7 @@ namespace ConsoleApp
    
         public int Dequeue()
         {
-            return 1; 
+            return prvky[0]; 
         }
     
     
