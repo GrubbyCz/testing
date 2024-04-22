@@ -1,14 +1,17 @@
+using ConsoleApp;
+
 namespace Testosterone
 {
     [TestClass]
-    public class UnitTest1 
+    public class UnitTest1
     {
-      [TestMethod]
-      public void tuneljeprazdny()
+        [TestMethod]
+        public void tuneljeprazdny()
         {
-            Tunel tunel = new Tunel();
+            FIFO tunel = new FIFO();
 
-            Assert.AreEqual(0, Tunel.Count(), "Vytvoøený zásobník není prázdný.");
+            Assert.AreEqual(0, tunel.Count(), "tunel není prázdný");
+
         }
     }
 }
