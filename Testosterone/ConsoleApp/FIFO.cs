@@ -40,5 +40,13 @@ namespace ConsoleApp
 
             prvky[pocet] = prvek;
         }
+   
+        public int Dequeue()
+        {
+            return 1; 
+        }
+    
+    
+    
     }
 }

@@ -1,4 +1,6 @@
 using ConsoleApp;
+using Newtonsoft.Json.Linq;
+using System.Globalization;
 
 namespace Testosterone
 {
@@ -19,6 +21,27 @@ namespace Testosterone
             FIFO tunel = new FIFO();
             tunel.Enqueue(2);
             Assert.AreNotEqual(0, tunel.Count(), "Tunel je prázdný");
+        }
+        [TestMethod]
+        public void pocetvlozeniodpovidapoctuprvku()
+        {
+            FIFO tunel = new FIFO();
+            tunel.Enqueue(1);
+            tunel.Enqueue(2);
+            tunel.Enqueue(3);
+
+            Assert.AreEqual(3, tunel.Count(), "poèet prvkù v tunelu nesedí");
+        }
+
+        [TestMethod]
+        public void prvnivlozenyjeprvniodebrany()
+        {
+            FIFO tunel = new FIFO();
+            tunel.Enqueue(4);
+            tunel.Enqueue(2);
+            tunel.Enqueue(3);
+
+            Assert.AreEqual(4, tunel.Dequeue(), "první odebraná není stejná jako první pøidaná");
         }
     }
 }
