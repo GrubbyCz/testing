@@ -22,5 +22,23 @@ namespace ConsoleApp
         {
             return pocet;
         }
+
+        public void Enqueue(int prvek)
+        {
+            if (pocet == prvky.Length)
+            {
+                int[] novePole = new int[2 * prvky.Length];
+
+                for (int i = 0; i < prvky.Length; i++)
+                    novePole[i] = prvky[i];
+
+                prvky = novePole;
+            }
+
+            prvky[pocet] = prvek;
+            pocet += 1;
+
+            prvky[pocet] = prvek;
+        }
     }
 }
