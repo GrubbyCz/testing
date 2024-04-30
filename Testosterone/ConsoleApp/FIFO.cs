@@ -13,7 +13,7 @@ namespace ConsoleApp
 
         public FIFO()
         { 
-            prvky = new int[5];
+            prvky = new int[50];
 
         }
 
@@ -45,8 +45,6 @@ namespace ConsoleApp
         {
             return prvky[0]; 
         }
-    
-    
-    
+
     }
 }

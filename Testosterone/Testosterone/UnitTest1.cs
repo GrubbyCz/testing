@@ -40,6 +40,31 @@ namespace Testosterone
             tunel.Enqueue(4);
             tunel.Enqueue(2);
             tunel.Enqueue(3);
+            tunel.Enqueue(3);
+            tunel.Enqueue(5);
+            tunel.Enqueue(3);
+            tunel.Enqueue(2);
+            tunel.Enqueue(1);
+            tunel.Enqueue(3);
+
+            tunel.Dequeue();
+
+            Assert.AreEqual(4, tunel.Dequeue(), "první odebraná není stejná jako první pøidaná");
+        }
+
+        [TestMethod]
+        public void druhyvlozenyjedruhyodebrany()
+        {
+            FIFO tunel = new FIFO();
+            tunel.Enqueue(4);
+            tunel.Enqueue(2);
+            tunel.Enqueue(3);
+            tunel.Enqueue(3);
+            tunel.Enqueue(5);
+            tunel.Enqueue(3);
+            tunel.Enqueue(2);
+            tunel.Enqueue(1);
+            tunel.Enqueue(3);
 
             Assert.AreEqual(4, tunel.Dequeue(), "první odebraná není stejná jako první pøidaná");
         }
